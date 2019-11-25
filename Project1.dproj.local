@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.797,C:\Users\eurtaev\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\work\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.814,=D:\work\DirToLotsia\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.718,C:\Users\eurtaev\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\work\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.797,C:\Users\eurtaev\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\work\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.729,=C:\Users\eurtaev\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

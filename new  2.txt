@@ -1,0 +1,100 @@
+shifr 
+if( shifr='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100000426200000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :shifr )' )
+		   
+oboznach
+if( oboznach='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100000536200000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :oboznach )' )
+list
+if( list='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100000536300000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :list )' )
+stadia
+if( stadia='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100000536400000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :stadia )' )
+izm
+if( izm='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100000536500000 
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :izm )' )
+name
+if( name='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  -30
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :name )' )
+avtor
+if( avtor='', '', 'exists (SELECT 1 FROM  LSDBO.EmplUsers_v
+      where   LSDBO.EmplUsers_v.ID  =  LSDBO.object_reference_view.Author_ID  
+           and LSDBO.EmplUsers_v.Name like :avtor )' )
+prog
+if( prog='', '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_string_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100022774000000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_string_view.id
+           and lsdbo.value_string_view.value like :prog )' )
+elp_olp
+if( elp_elo=3, '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_numeric_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100022873300000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_numeric_view.id
+           and lsdbo.value_numeric_view.value = :elp_elo )' )
+adata
+if( adata=date('01.01.2001'), '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_datetime_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100022873100000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_datetime_view.id
+           and lsdbo.value_datetime_view.value >= :adata )' )
+adata_end
+if( adataend=date('01.01.2001'), '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_datetime_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100022873100000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_datetime_view.id
+           and lsdbo.value_datetime_view.value <= :adataend )' )
+anumber
+if( anumber=0, '', 'exists (SELECT 1 FROM LSDBO.attrib_value_view, lsdbo.value_numeric_view
+      where  LSDBO.attrib_value_view.object_id = lsdbo.object_reference_view.id 
+           and LSDBO.attrib_value_view.attrib_id =  100022873000000
+           and LSDBO.attrib_value_view.value_id =  lsdbo.value_numeric_view.id
+           and lsdbo.value_numeric_view.value like :anumber )' )
+id
+if(id=10, '','lsdbo.object_reference_view.id like :id')
+ lsaddwhere 
+ 
+ условие доп отбора
+ f_GlobalReplace ( if (    compute_0042 = '',  '1=1',   compute_0042 ) + if (    compute_1480 = '', '' , ' and ' +   compute_1480 ) + if (     compute_5726 = '', '' , ' and ' +    compute_5726 ) + if (     compute_6335 = '', '' , ' and ' +    compute_6335 )+ if (      compute_6503 = '', '' , ' and ' +     compute_6503 )+ if (       compute_8469 = '', '' , ' and ' +      compute_8469 )+ if (  compute_9171 = '', '' , ' and ' +       compute_9171 )+ if (  compute_9361 = '', '' , ' and ' +       compute_9361 ) + if(compute_4861 = '', '', ' and '+compute_4861) + if(compute_3427 = '', '', ' and '+compute_3427)+ if(compute_5276 = '', '', ' and '+compute_5276) +  if(compute_2731 = '', '', ' and '+compute_2731) +  if(compute_0640 = '', '', ' and '+compute_0640),  '1=1 and ',  '', 1) 
+ 
+ 
+  f_GlobalReplace ( if (    compute_3128 = '',  '1=1',   compute_3128 ) + if (    compute_8251 = '', '' , ' and ' +   compute_8251 ) + if (     compute_6298 = '', '' , ' and ' +    compute_6298 ) + if (     compute_4975 = '', '' , ' and ' +    compute_4975 )+ if (      compute_6592 = '', '' , ' and ' +     compute_6592 )+ if (       compute_5201 = '', '' , ' and ' +      compute_5201 )+ if (  compute_1708 = '', '' , ' and ' +       compute_1708 )+ if (  compute_0648 = '', '' , ' and ' +       compute_0648 ) + if(compute_5076 = '', '', ' and '+compute_5076 ) + if(compute_0098 = '', '', ' and '+compute_0098 )+ if(compute_7570 = '', '', ' and '+compute_7570 ) +  if(compute_3834 = '', '', ' and '+compute_3834) +  if(compute_1451 = '', '', ' and '+compute_1451),  '1=1 and ',  '', 1) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
